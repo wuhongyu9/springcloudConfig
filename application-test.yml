@@ -1,3 +1,2 @@
 config: 
-    info:   
-        "hello c";
+    info: "hello c"

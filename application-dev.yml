@@ -1,0 +1,24 @@
+server:
+  port:
+    9002
+spring:
+  application:
+    name:
+      cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/why8023wmy/springcloudConfig
+          search-path:
+            - springcloudConfig
+      label: master
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+    instance:
+        instance-id: config-center9002
+        prefer-ip-address: true
